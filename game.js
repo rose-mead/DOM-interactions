@@ -41,10 +41,16 @@ function updateCounts () {
     invisible: 0
   }
 
-  blueValue = document.getElementsByClassName('blue').length
-  console.log(blueValue)
-  totals.blue = blueValue
-  
+  // TO COUNT ALL STATES
+  for (var key in totals) {
+    totals[key] = document.getElementsByClassName(key).length 
+  }
+
+  // TO COUNT ONLY BLUE STATES
+  // blueValue = document.getElementsByClassName('blue').length
+  // console.log(blueValue)
+  // totals.blue = blueValue
+
   
   // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
 
